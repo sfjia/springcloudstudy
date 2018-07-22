@@ -1,0 +1,15 @@
+## 端口号
+server:
+  port: 8766
+
+## 服务名字
+spring:
+  application:
+    name: service-ribbon-hystric
+
+##  注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+

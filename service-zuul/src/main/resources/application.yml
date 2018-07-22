@@ -1,0 +1,37 @@
+
+## �˿ں�
+server:
+  port: 8768
+
+
+
+## 服务名字 fu wu ming zi
+spring:
+  application:
+    name: service-zuul
+
+
+## ָ注册中心 zhu ce zhong xin
+eureka:
+  client:
+    service-url:
+      defaulutZone: http://localhost:8761/eureka/
+
+
+## ��ת·��
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+#zuul:
+#  routes:
+#    api-a:
+#      path: /api-a/**
+#      serviceId: service-ribbon
+#    api-b:
+#      path: /api-b/**
+#      serviceId: service-feign
